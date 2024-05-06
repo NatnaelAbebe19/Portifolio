@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place particles behind other content */
+}
+
+.perspectiveParagraph {
+  transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.perspectiveParagraph:nth-of-type(2) {
+  transform: rotateX(-90deg) translateY(9px);
+  opacity: 0;
+  transform-origin: bottom center;
+}
+
+.PerspepctiveText {
+  transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+  transform-style: preserve-3d;
+}
+
+.slider:hover .PerspepctiveText {
+  transform: rotateX(90deg);
+}
+
+.slider:hover .PerspepctiveText p:nth-of-type(1) {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.slider:hover .PerspepctiveText p:nth-of-type(2) {
+  opacity: 1;
+}
+
+.linkContainer {
+  perspective: 12000px;
+  perspective-origin: bottom;
+}
+.stroke span {
+  -webkit-text-stroke: 0.7px #c9fd74;
+  color: transparent;
+  /* padding: 5px; */
+  /* margin-left: -20px; */
+  transition: all 0.6s cubic-bezier(0.61, 1, 0.88, 1);
+  /* transition: all 1s ease-in-out; */
+}
+
+.stroke span:hover {
+  color: white;
+}
+
+.stroke span:has(~ span:hover) {
+  color: #c9fd74;
+}
+
+@media screen and (min-width: 768px) {
+  .stroke span {
+    padding: 3px;
+  }
+}
+
+.animate {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, 50%);
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -7px;
+  top: 27px;
+  border-radius: 50%;
+  background: #c9fd74;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  top: 29px;
+  left: -5px;
+  /* top: 19px; */
+}
+/* }
+.container {
+  //position: absolute;
+  perspective: 1000px;
+}
+.box {
+  height: 250px;
+  width: 250px;
+  //position: absolute;
+  top: 100px;
+  left: 100px;
+  transform-style: preserve-3d;
+  transform: rotateY(30deg);
+}
+.card {
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  padding: 100px 0;
+  color: white;
+  background: black;
+  border: 2px solid white;
+  font-size: 32px;
+  box-sizing: border-box;
+  position: absolute;
+}
+#front {
+  transform: translateZ(125px);
+}
+#back {
+  transform: translateZ(-125px);
+}
+
+#left {
+  right: 125px;
+  transform: rotateY(-90deg);
+}
+#right {
+  left: 125px;
+  transform: rotateY(90deg);
+}
+#top {
+  right: 125px;
+  transform: rotateX(90deg);
+}
+#bottom {
+  top: 125px;
+  transform: rotateX(-90deg);
+} */
