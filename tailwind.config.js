@@ -14,6 +14,7 @@ export default {
         protest: ["Protest Guerrilla"],
         Lobster: ["Lobster"],
         Lugrasimo: ["Lugrasimo"],
+        Roboto: ["Roboto Mono"],
       },
     },
   },
