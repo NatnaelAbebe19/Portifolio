@@ -6,18 +6,20 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navigator/Navbar";
 import About from "./components/About/About";
-
+import Projects from "./components/Projects/Projects";
 function App() {
   return (
-    <div className="w-full max-w-[1200px] mx-auto ">
+    <div className="w-full max-w-[1200px] mx-auto overflow-hidden">
       <ParticlesBackground />
       <div className="flex justify-center items-start h-screen ">
         <Navbar className="z-30000 border-b-2 " />
-
         <Hero className="z-29 " />
       </div>
       <div className="mx-auto">
         <About />
+      </div>
+      <div className="mx-auto">
+        <Projects />
       </div>
     </div>
   );

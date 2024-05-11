@@ -10,8 +10,8 @@ function Hero() {
   const handleScroll = () => {
     const buttonRect = buttonRef.current.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    console.log("top" + buttonRect.top);
-    console.log(buttonRect);
+    // console.log("top" + buttonRect.top);
+    // console.log(buttonRect);
     if (buttonRect.top < 50) {
       setIsVisible(false);
     } else {
