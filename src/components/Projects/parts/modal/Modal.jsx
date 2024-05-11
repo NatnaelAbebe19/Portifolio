@@ -6,8 +6,23 @@ const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
   open: {
     scale: 1,
+    x: "-90%",
+    y: "-90%",
+    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    scale: 0,
     x: "-50%",
     y: "-50%",
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
+  },
+};
+const scaleAnimationCursor = {
+  initial: { scale: 0, x: "-50%", y: "-50%" },
+  open: {
+    scale: 1,
+    x: "-280%",
+    y: "-180%",
     transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
   },
   closed: {
@@ -63,8 +78,12 @@ function Modal({ modal, projects }) {
     });
   }, []);
 
+  function handleClick() {
+    console.log("Clicked");
+  }
+
   return (
-    <>
+    <div>
       <motion.div
         ref={container}
         variants={scaleAnimation}
@@ -83,7 +102,7 @@ function Modal({ modal, projects }) {
               >
                 <img
                   src={`/images/${src}`}
-                  width={270}
+                  width={300}
                   height={0}
                   alt="image"
                   // className="w-[230px] md:w-[270px]"
@@ -94,14 +113,15 @@ function Modal({ modal, projects }) {
         </div>
       </motion.div>
       <motion.div
-        variants={scaleAnimation}
+        variants={scaleAnimationCursor}
         initial={"initial"}
         animate={active ? "open" : "closed"}
         ref={cursor}
         className="cursor"
+        onClick={handleClick}
       ></motion.div>
       <motion.div
-        variants={scaleAnimation}
+        variants={scaleAnimationCursor}
         initial={"initial"}
         animate={active ? "open" : "closed"}
         ref={cursorLabel}
@@ -109,7 +129,7 @@ function Modal({ modal, projects }) {
       >
         view
       </motion.div>
-    </>
+    </div>
   );
 }
 
