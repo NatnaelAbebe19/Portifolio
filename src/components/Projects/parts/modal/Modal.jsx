@@ -105,7 +105,6 @@ function Modal({ modal, projects }) {
                   width={300}
                   height={0}
                   alt="image"
-                  // className="w-[230px] md:w-[270px]"
                 />
               </div>
             );
@@ -118,7 +117,6 @@ function Modal({ modal, projects }) {
         animate={active ? "open" : "closed"}
         ref={cursor}
         className="cursor"
-        onClick={handleClick}
       ></motion.div>
       <motion.div
         variants={scaleAnimationCursor}

@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navigator/Navbar";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
 function App() {
   return (
     <div className="w-full max-w-[1200px] mx-auto overflow-hidden">
@@ -20,6 +21,9 @@ function App() {
       </div>
       <div className="mx-auto">
         <Projects />
+      </div>
+      <div>
+        <Skills />
       </div>
     </div>
   );
