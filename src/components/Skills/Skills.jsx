@@ -6,7 +6,7 @@ function Skills() {
       <p className="text-white text-center">
         Hello Those are the skills I have for the time being
       </p>
-      <div className="text-5xl text-[#c9fd74]">Hello</div>
+      <div className="text-5xl text-[#c9fd74]">Hellfdo</div>
     </div>
   );
 }

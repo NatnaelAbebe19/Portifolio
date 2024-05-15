@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navigator/Navbar";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import HeroParallax from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
       <div className="mx-auto">
         <About />
       </div>
-      <div className="mx-auto">
+      {/* <div className="mx-auto">
         <Projects />
+      </div> */}
+      <div>
+        <HeroParallax />
       </div>
       <div>
         <Skills />
