@@ -7,7 +7,7 @@ export const products = [
 
   {
     title: "Audiophile",
-    link: "https://cursor.so",
+    link: "https://audiophile-ecommerce-ebon.vercel.app/",
     thumbnail: "images/audiophile.png",
   },
   {
