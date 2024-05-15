@@ -3,9 +3,9 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { products } from "./NewProject";
 
 const HeroParallax = () => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  const firstRow = products.slice(0, 3);
+  const secondRow = products.slice(3, 6);
+  const thirdRow = products.slice(6, 9);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -42,7 +42,7 @@ const HeroParallax = () => {
   return (
     <div
       ref={ref}
-      className="h-[330vh] py-40 w-[80%] mx-auto overflow-hidden  antialiased relative flex flex-col self-auto perspective-[1000px] transform-style-preserve-3d"
+      className="h-[315vh] py-40 w-[80%] mx-auto overflow-hidden  antialiased relative flex flex-col self-auto perspective-[1000px] transform-style-preserve-3d"
     >
       <Header />
       <motion.div
@@ -90,13 +90,12 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        The Ultimate <br /> development studio
+        Projects <br /> I have built so far
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
-      </p>
+      {/* <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+        Those projects showcases the some of my ideas, that I have been working
+        so
+      </p> */}
     </div>
   );
 };
@@ -111,7 +110,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-80 w-[30rem] relative flex-shrink-0"
     >
       <a
         href={product.link}
@@ -120,9 +119,9 @@ export const ProductCard = ({ product, translate }) => {
       >
         <img
           src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          // height="600"
+          // width="600"
+          className="object-fill object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </a>
