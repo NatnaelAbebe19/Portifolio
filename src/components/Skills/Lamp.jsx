@@ -1,6 +1,12 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import {
+  useDragControls,
+  useMotionValue,
+  useAnimate,
+  motion,
+} from "framer-motion";
+import useMeasure from "react-use-measure";
 import { Cn } from "./Cn";
 
 function LampDemo() {
@@ -23,10 +29,11 @@ function LampDemo() {
 }
 
 export const LampContainer = ({ children, className }) => {
+  const [open, setOpen] = useState(false);
   return (
     <div
       className={Cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
+        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md mt-12 z-0",
         className
       )}
     >
@@ -84,16 +91,109 @@ export const LampContainer = ({ children, className }) => {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-cyan-400 "
+          className="absolute inset-auto z-50 h-0.5 w-[30rem]  -translate-y-[7rem] bg-cyan-400 "
         ></motion.div>
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
 
+      <div className="grid h-screen absolute top-32 z-[2000] place-content-center bg-transparent w-full">
+        <button
+          onClick={() => setOpen(true)}
+          className="rounded bg-[#c9fd74] px-4 py-2 text-3xl  text-slate-950 transition-colors hover:bg-[#a1c960]"
+        >
+          Click me
+        </button>
+        <DragCloseDrawer open={open} setOpen={setOpen}>
+          <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 z-[2000]">
+            <h2 className="text-4xl font-bold text-neutral-200">
+              Drag the handle at the top of this modal downwards 100px to close
+              it
+            </h2>
+          </div>
+        </DragCloseDrawer>
+      </div>
       <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}
       </div>
     </div>
+  );
+};
+
+const DragCloseDrawer = ({ open, setOpen, children }) => {
+  const [scope, animate] = useAnimate();
+  const [drawerRef, { height }] = useMeasure();
+
+  const y = useMotionValue(0);
+  const controls = useDragControls();
+
+  const handleClose = async () => {
+    animate(scope.current, {
+      opacity: [1, 0],
+    });
+
+    const yStart = typeof y.get() === "number" ? y.get() : 0;
+
+    await animate("#drawer", {
+      y: [yStart, height],
+    });
+
+    setOpen(false);
+  };
+
+  return (
+    <>
+      {open && (
+        <motion.div
+          ref={scope}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          onClick={handleClose}
+          className="fixed inset-0 z-50 bg-neutral-950/70 "
+        >
+          <motion.div
+            id="drawer"
+            ref={drawerRef}
+            onClick={(e) => e.stopPropagation()}
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            transition={{
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-0 h-[75vh] w-full overflow-hidden rounded-t-3xl bg-neutral-900"
+            style={{ y }}
+            drag="y"
+            dragControls={controls}
+            onDragEnd={() => {
+              if (y.get() >= 100) {
+                handleClose();
+              }
+            }}
+            dragListener={false}
+            dragConstraints={{
+              top: 0,
+              bottom: 0,
+            }}
+            dragElastic={{
+              top: 0,
+              bottom: 0.5,
+            }}
+          >
+            <div className="absolute left-0 right-0 top-0 z-10 flex justify-center bg-neutral-900 p-4">
+              <button
+                onPointerDown={(e) => {
+                  controls.start(e);
+                }}
+                className="h-2 w-14 cursor-grab touch-none rounded-full bg-neutral-700 active:cursor-grabbing"
+              ></button>
+            </div>
+            <div className="relative z-0 h-full overflow-y-scroll p-4 pt-12">
+              {children}
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </>
   );
 };
 
