@@ -97,19 +97,337 @@ export const LampContainer = ({ children, className }) => {
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
 
-      <div className="grid h-screen absolute top-32 z-[2000] place-content-center bg-transparent w-full">
-        <button
-          onClick={() => setOpen(true)}
-          className="rounded bg-[#c9fd74] px-4 py-2 text-3xl  text-slate-950 transition-colors hover:bg-[#a1c960]"
-        >
-          Click me
+      <div className="grid h-screen absolute top-36 z-[2000] place-content-center bg-transparent w-full">
+        <button onClick={() => setOpen(true)} className="button text-2xl">
+          Reveal
         </button>
-        <DragCloseDrawer open={open} setOpen={setOpen}>
-          <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 z-[2000]">
-            <h2 className="text-4xl font-bold text-neutral-200">
-              Drag the handle at the top of this modal downwards 100px to close
-              it
-            </h2>
+        <DragCloseDrawer open={open} setOpen={setOpen} className="z-[200010]">
+          <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 z-[20000] flex flex-col gap-4">
+            <div className="mt-4 ">
+              <h2 className="text-3xl font-bold text-neutral-200 my-4">
+                Languages
+              </h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden ">
+                <motion.img
+                  src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+                  alt="HTML"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+                  alt="css3"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+                  alt="javascript"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+                  alt="python"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)"
+                  alt="java"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+
+                <motion.img
+                  src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+                  alt="c++"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div className="mt-8">
+              <h2 className="text-3xl font-bold text-neutral-200">
+                Frameworks
+              </h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
+                <motion.img
+                  src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                  alt="tailwindcss"
+                  initial={{ y: "250%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                  alt="React"
+                  initial={{ y: "250%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"
+                  alt="redux"
+                  initial={{ y: "250%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+              </div>
+            </div>
+            <div className="mt-8">
+              <h2 className="text-3xl font-bold text-neutral-200">Design</h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden">
+                <motion.img
+                  src="https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6"
+                  alt="Adobe XD"
+                  initial={{ y: "200%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+
+                <motion.img
+                  src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
+                  alt="Figma"
+                  initial={{ y: "200%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue"
+                  alt="Framer"
+                  initial={{ y: "200%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"
+                  alt="Canva"
+                  initial={{ y: "200%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-neutral-200">
+                Version Control
+              </h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
+                <motion.img
+                  src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+                  alt="git"
+                  initial={{ y: "150%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+                  alt="github"
+                  initial={{ y: "150%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+              </div>
+            </div>
+            <div className="">
+              <h2 className="text-3xl font-bold text-neutral-200">
+                Developer Forums
+              </h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
+                <motion.img
+                  src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"
+                  alt="Hacker Rank"
+                  initial={{ y: "125%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06"
+                  alt="LeetCode"
+                  initial={{ y: "125%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+
+                <motion.img
+                  src="https://img.shields.io/badge/Quora-%23B92B27.svg?style=for-the-badge&logo=Quora&logoColor=white"
+                  alt="Quora"
+                  initial={{ y: "125%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white"
+                  alt="Stackoverflow"
+                  initial={{ y: "125%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white"
+                  alt="Reddit"
+                  initial={{ y: "125%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+              </div>
+            </div>
+            <div className="mt-8">
+              <h2 className="text-3xl font-bold text-neutral-200">
+                Hosting/SaaS
+              </h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
+                <motion.img
+                  src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7"
+                  alt="netlify"
+                  initial={{ y: "100%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+                <motion.img
+                  src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"
+                  alt="vercel"
+                  initial={{ y: "100%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+              </div>
+            </div>
+            <div className="">
+              <h2 className="text-3xl font-bold text-neutral-200">Others</h2>
+              <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
+                <motion.img
+                  src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"
+                  alt="Arduino"
+                  initial={{ y: "300%" }}
+                  animate={{
+                    y: "0%", // Animate vertically: 0px -> -20px -> 0px
+                  }}
+                  transition={{
+                    duration: 1, // Animation duration in seconds
+                    ease: "linear", // Easing function for smooth animation
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </DragCloseDrawer>
       </div>
