@@ -9,6 +9,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import HeroParallax from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
 function App() {
   return (
     <div className="w-full max-w-[1200px] mx-auto overflow-hidden">
@@ -28,6 +29,9 @@ function App() {
       </div>
       <div>
         <Skills />
+      </div>
+      <div>
+        <Contact />
       </div>
     </div>
   );

@@ -104,7 +104,7 @@ export const LampContainer = ({ children, className }) => {
         <DragCloseDrawer open={open} setOpen={setOpen} className="z-[200010]">
           <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 z-[20000] flex flex-col gap-4">
             <div className="mt-4 ">
-              <h2 className="text-3xl font-bold text-neutral-200 my-4">
+              <h2 className="text-2xl font-bold text-[#c9fd74] my-4">
                 Languages
               </h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden ">
@@ -185,9 +185,7 @@ export const LampContainer = ({ children, className }) => {
               </div>
             </div>
             <div className="mt-8">
-              <h2 className="text-3xl font-bold text-neutral-200">
-                Frameworks
-              </h2>
+              <h2 className="text-2xl font-bold text-[#c9fd74]">Frameworks</h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
                 <motion.img
                   src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
@@ -228,7 +226,7 @@ export const LampContainer = ({ children, className }) => {
               </div>
             </div>
             <div className="mt-8">
-              <h2 className="text-3xl font-bold text-neutral-200">Design</h2>
+              <h2 className="text-2xl font-bold text-[#c9fd74]">Design</h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden">
                 <motion.img
                   src="https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6"
@@ -282,7 +280,7 @@ export const LampContainer = ({ children, className }) => {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-neutral-200">
+              <h2 className="text-2xl font-bold text-[#c9fd74]">
                 Version Control
               </h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
@@ -313,7 +311,7 @@ export const LampContainer = ({ children, className }) => {
               </div>
             </div>
             <div className="">
-              <h2 className="text-3xl font-bold text-neutral-200">
+              <h2 className="text-2xl font-bold text-[#c9fd74]">
                 Developer Forums
               </h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
@@ -381,7 +379,7 @@ export const LampContainer = ({ children, className }) => {
               </div>
             </div>
             <div className="mt-8">
-              <h2 className="text-3xl font-bold text-neutral-200">
+              <h2 className="text-2xl font-bold text-[#c9fd74]">
                 Hosting/SaaS
               </h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
@@ -412,7 +410,7 @@ export const LampContainer = ({ children, className }) => {
               </div>
             </div>
             <div className="">
-              <h2 className="text-3xl font-bold text-neutral-200">Others</h2>
+              <h2 className="text-2xl font-bold text-[#c9fd74]">Others</h2>
               <div className="mt-4 flex gap-3 flex-wrap overflow-hidden  ">
                 <motion.img
                   src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"
