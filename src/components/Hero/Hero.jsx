@@ -44,7 +44,10 @@ function Hero() {
     console.log("clicked");
   }
   return (
-    <div className="z-10 text-[rgb(255,255,255)] flex justify-around lg:justify-between flex-col lg:flex-row items-center mx-auto  h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] w-[80%]">
+    <div
+      id="Home"
+      className="z-10 text-[rgb(255,255,255)] flex justify-around lg:justify-between flex-col lg:flex-row items-center mx-auto  h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] w-[80%]"
+    >
       <div className="mt-20">
         <div className="uppercase text-center lg:text-left font-bold md:p-7 p-4 leading-10 md:text-5xl sm:text-4xl text-3xl stroke">
           <span className="hover:italic">T</span>
@@ -115,9 +118,13 @@ function Hero() {
             id="callToAction"
           >
             {isVisible ? (
-              <span>Let's talk</span>
+              <span>
+                <a href="#Contacts">Let's talk</a>
+              </span>
             ) : (
-              <MdOutlineMailOutline className="h-7 w-7 bg-[#c9fd74] rounded-full" />
+              <a href="#Contacts">
+                <MdOutlineMailOutline className="h-7 w-7 bg-[#c9fd74] rounded-full" />
+              </a>
             )}
           </motion.div>
         </motion.div>

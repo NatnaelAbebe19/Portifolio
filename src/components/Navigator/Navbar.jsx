@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "./Menu";
 
-function Navbar() {
+function Navbar({ scrollToSection }) {
   return (
     <nav className="">
       <div className="font-bold">
@@ -9,7 +9,7 @@ function Navbar() {
           natnaels
         </div>
       </div>
-      <Menu />
+      <Menu scrollToSection={scrollToSection} />
     </nav>
   );
 }

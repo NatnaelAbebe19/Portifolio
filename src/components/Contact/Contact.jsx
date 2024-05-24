@@ -35,7 +35,7 @@ function Contact() {
   }
 
   return (
-    <div className="md:h-screen w-full">
+    <div id="Contacts" className="md:h-screen w-full">
       <h1 className="text-[#c9fd74] text-5xl py-10 text-center">
         Get in touch
       </h1>

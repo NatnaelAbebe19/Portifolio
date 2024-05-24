@@ -10,7 +10,7 @@ import useMeasure from "react-use-measure";
 
 export default function LampDemo() {
   return (
-    <div>
+    <div id="Skills">
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}

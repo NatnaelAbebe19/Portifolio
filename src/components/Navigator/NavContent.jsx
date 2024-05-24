@@ -1,6 +1,7 @@
 import React from "react";
 import { Navdata, FooterLinks } from "./Navdata";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const perspective = {
   initial: {
@@ -49,11 +50,11 @@ const slideIn = {
   },
 };
 
-function NavContent() {
+function NavContent({ scrollToSection, setIsActive }) {
   return (
     <div className="h-full pt-[100px] pr-[40px] pb-[50px] pl-[40px] box-border flex flex-col justify-between">
       <div className="flex flex-col gap-[10px]">
-        {Navdata.map((Link, i) => {
+        {Navdata.map((Links, i) => {
           return (
             <div key={i} className="linkContainer">
               <motion.div
@@ -62,23 +63,28 @@ function NavContent() {
                 animate="enter"
                 exit="exit"
                 initial="initial"
+                className="cursor-pointer"
               >
                 <a
                   className="text-black no-underline text-[40px]"
-                  href={Link.href}
+                  href={`#${Links.title}`}
+                  onClick={() => {
+                    setIsActive(false);
+                  }}
+                  // href={Link.href}
                 >
-                  {Link.title}
+                  {Links.title}
                 </a>
               </motion.div>
             </div>
           );
         })}
       </div>
-      <div className="flex flex-wrap ">
-        {FooterLinks.map((Link, i) => {
+      <div className="flex flex-wrap">
+        {FooterLinks.map((Links, i) => {
           return (
             <motion.a
-              href={Link.href}
+              href={Links.href}
               key={`f_${i}`}
               custom={i}
               variants={slideIn}
@@ -88,7 +94,7 @@ function NavContent() {
               target="_blank"
               className="w-[50%] text-black no-underline"
             >
-              {Link.title}
+              {Links.title}
             </motion.a>
           );
         })}

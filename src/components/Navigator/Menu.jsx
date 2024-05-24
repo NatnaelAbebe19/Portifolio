@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MenuButton from "./MenuButton";
 import { AnimatePresence, motion } from "framer-motion";
 import NavContent from "./NavContent";
+
 // import
 
 const variants = {
@@ -17,7 +18,7 @@ const variants = {
   },
 };
 
-const Menu = () => {
+const Menu = ({ scrollToSection }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className="fixed top-4 right-4 md:top-7 md:right-20  z-[565]">
@@ -27,7 +28,14 @@ const Menu = () => {
         initial="closed"
         className={`relative w-[350px] h-[550px] bg-[#c9fd74] rounded-[25px]`}
       >
-        <AnimatePresence>{isActive && <NavContent />}</AnimatePresence>
+        <AnimatePresence>
+          {isActive && (
+            <NavContent
+              scrollToSection={scrollToSection}
+              setIsActive={setIsActive}
+            />
+          )}
+        </AnimatePresence>
       </motion.div>
       <MenuButton
         className={`${isActive ? "relative top-[20px] right-[8px]" : ""}`}

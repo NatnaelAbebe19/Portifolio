@@ -1,41 +1,41 @@
 export const Navdata = [
   {
-    title: "Projects",
-    href: "/",
+    title: "Home",
+    href: "#",
   },
   {
-    title: "Agency",
-    href: "/",
+    title: "About",
+    href: "#",
   },
   {
-    title: "Expertise",
-    href: "/",
+    title: "Project",
+    href: "#",
   },
   {
-    title: "Careers",
-    href: "/",
+    title: "Skills",
+    href: "#",
   },
   {
     title: "Contacts",
-    href: "/",
+    href: "#",
   },
 ];
 
 export const FooterLinks = [
   {
     title: "Facebook",
-    href: "/",
+    href: "https://www.facebook.com/natty.minilik",
   },
   {
     title: "LinkedIn",
-    href: "/",
+    href: "https://www.linkedin.com/in/natnael-abebe-57a079295/",
   },
   {
     title: "Instagram",
-    href: "/",
+    href: "https://www.instagram.com/nathaniel_abebe/",
   },
   {
     title: "Twitter",
-    href: "/",
+    href: "https://x.com/Natnael163260",
   },
 ];
