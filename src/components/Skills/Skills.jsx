@@ -1,12 +1,6 @@
-import React, { useState } from "react";
-import {
-  useDragControls,
-  useMotionValue,
-  useAnimate,
-  motion,
-} from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { LampContainer } from "./Lamp";
-import useMeasure from "react-use-measure";
 
 export default function LampDemo() {
   return (

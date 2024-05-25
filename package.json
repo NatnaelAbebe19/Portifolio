@@ -29,6 +29,7 @@
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.0",
+    "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.23.1",
     "react-tsparticles": "^2.12.2",
     "react-use-measure": "^2.1.1",

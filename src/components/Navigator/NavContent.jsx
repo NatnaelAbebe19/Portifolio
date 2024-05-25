@@ -63,15 +63,14 @@ function NavContent({ scrollToSection, setIsActive }) {
                 animate="enter"
                 exit="exit"
                 initial="initial"
-                className="cursor-pointer"
+                className="cursor-pointer z-50"
               >
                 <a
-                  className="text-black no-underline text-[40px]"
+                  className="text-black no-underline text-[40px] cursor-pointer z-49"
                   href={`#${Links.title}`}
                   onClick={() => {
                     setIsActive(false);
                   }}
-                  // href={Link.href}
                 >
                   {Links.title}
                 </a>

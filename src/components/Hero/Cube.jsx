@@ -1,12 +1,12 @@
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import React, { useEffect, useRef, useState } from "react";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
-import image1 from "/images/1.png";
-import image2 from "/images/2.png";
-import image3 from "/images/3.png";
-import image4 from "/images/4.png";
-import image5 from "/images/5.jpg";
-import image6 from "/images/6.png";
+import image1 from "/images/coder.webp";
+import image2 from "/images/2.webp";
+import image3 from "/images/3.webp";
+import image4 from "/images/4.webp";
+import image5 from "/images/space.webp";
+import image6 from "/images/6.webp";
 import { OrbitControls } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
@@ -73,18 +73,12 @@ function Cuber() {
     return () => window.removeEventListener("mouse", manageMouseMove);
   }, []);
 
-  // useFrame((state, delta) => {
-  //   mesh.current.rotation.x += delta * 0.25;
-  //   mesh.current.rotation.y += delta * 0.25;
-  //   mesh.current.rotation.z += delta * 0.25;
-  // });
-
   const texture_1 = useLoader(TextureLoader, image1);
   const texture_2 = useLoader(TextureLoader, image2);
   const texture_3 = useLoader(TextureLoader, image3);
   const texture_4 = useLoader(TextureLoader, image4);
-  const texture_5 = useLoader(TextureLoader, image5);
-  const texture_6 = useLoader(TextureLoader, image6);
+  const texture_5 = useLoader(TextureLoader, image6);
+  const texture_6 = useLoader(TextureLoader, image5);
 
   return (
     <motion.mesh ref={mesh} rotation-y={mouse.x} rotation-x={mouse.y}>

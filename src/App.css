@@ -235,3 +235,17 @@ body {
 .send:hover::before {
   width: 100%;
 }
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in-animation 2s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

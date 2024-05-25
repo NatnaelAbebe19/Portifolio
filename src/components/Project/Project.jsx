@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { products } from "./NewProject";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroParallax = () => {
   const firstRow = products.slice(0, 3);
@@ -43,7 +44,7 @@ const HeroParallax = () => {
     <div
       id="Project"
       ref={ref}
-      className="h-[290vh] py-40 w-[80%] mx-auto overflow-hidden  antialiased relative flex flex-col self-auto perspective-[1000px] transform-style-preserve-3d"
+      className="h-[298vh] py-40 w-[80%] mx-auto overflow-hidden  antialiased relative flex flex-col self-auto perspective-[1000px] transform-style-preserve-3d"
     >
       <Header />
       <motion.div
@@ -93,10 +94,6 @@ export const Header = () => {
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
         Projects <br /> I have built so far
       </h1>
-      {/* <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        Those projects showcases the some of my ideas, that I have been working
-        so
-      </p> */}
     </div>
   );
 };
@@ -118,10 +115,8 @@ export const ProductCard = ({ product, translate }) => {
         className="block group-hover/product:shadow-2xl "
         target="_blank"
       >
-        <img
+        <LazyLoadImage
           src={product.thumbnail}
-          // height="600"
-          // width="600"
           className="object-fill object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />

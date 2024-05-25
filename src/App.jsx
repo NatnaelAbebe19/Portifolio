@@ -1,26 +1,33 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 import "./App.css";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navigator/Navbar";
 import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
 import HeroParallax from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import { BrowserRouter } from "react-router-dom";
+import Hello from "./components/Hello/Hello";
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
   const sectionRefs = useRef([]);
 
   const scrollToSection = (index) => {
     sectionRefs.current[index].scrollIntoView({ behavior: "smooth" });
   };
 
-  return (
+  return loading ? (
+    <Hello />
+  ) : (
     <BrowserRouter>
-      <div className="w-full max-w-[1200px] mx-auto overflow-hidden">
+      <div className={`w-full max-w-[1200px] mx-auto overflow-hidden  fade-in`}>
         <ParticlesBackground />
         <div className="flex justify-center items-start h-screen ">
           <Navbar
@@ -33,8 +40,8 @@ function App() {
           <About />
         </div>
         {/* <div className="mx-auto">
-        <Projects />
-      </div> */}
+          <Projects />
+        </div> */}
         <div>
           <HeroParallax />
         </div>

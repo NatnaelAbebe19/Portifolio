@@ -40,6 +40,18 @@ function Hero() {
     },
   };
 
+  const fadeInAnimationVariants2 = {
+    initial: {
+      opacity: 0,
+      x: -200,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.7, duration: 0.6 },
+    },
+  };
+
   function handleClick() {
     console.log("clicked");
   }
@@ -48,7 +60,13 @@ function Hero() {
       id="Home"
       className="z-10 text-[rgb(255,255,255)] flex justify-around lg:justify-between flex-col lg:flex-row items-center mx-auto  h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[85vh] w-[80%]"
     >
-      <div className="mt-20">
+      <motion.div
+        variants={fadeInAnimationVariants2}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="mt-20"
+      >
         <div className="uppercase text-center lg:text-left font-bold md:p-7 p-4 leading-10 md:text-5xl sm:text-4xl text-3xl stroke">
           <span className="hover:italic">T</span>
           <span>r</span>
@@ -128,7 +146,7 @@ function Hero() {
             )}
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
       <div className="container flex justify-center h-[54%] items-center w-[94%] lg:w-[65%]">
         <Cube className="block h-full" />
       </div>

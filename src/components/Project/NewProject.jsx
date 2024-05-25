@@ -2,50 +2,50 @@ export const products = [
   {
     title: "Ableton Clone",
     link: "https://ableton-clone-roan.vercel.app/",
-    thumbnail: "images/ableton.png",
+    thumbnail: "images/ableton.webp",
   },
 
   {
     title: "Audiophile",
     link: "https://audiophile-ecommerce-ebon.vercel.app/",
-    thumbnail: "images/audiophile.png",
+    thumbnail: "images/audiophile.webp",
   },
   {
     title: "Meme Generator",
     link: "https://meme-generator-7mjad02p5-natnaelabebe19s-projects.vercel.app/",
-    thumbnail: "images/MemeGenerator.png",
+    thumbnail: "images/MemeGenerator.webp",
   },
 
   {
     title: "Todo App",
     link: "https://todo-list-app-sigma-ten.vercel.app/",
-    thumbnail: "images/todo.png",
+    thumbnail: "images/todo.webp",
   },
 
   {
     title: "Techino",
     link: "https://tech-ino.vercel.app/",
-    thumbnail: "images/techino.png",
+    thumbnail: "images/techino.webp",
   },
   {
     title: "Tenzis",
     link: "https://roha-tenzies.vercel.app/",
-    thumbnail: "images/tenzis.png",
+    thumbnail: "images/tenzis.webp",
   },
 
   {
     title: "Roha Quizs",
     link: "https://roha-quizs.vercel.app/",
-    thumbnail: "images/quiz.png",
+    thumbnail: "images/quiz.webp",
   },
   {
     title: "pomodoro v2",
     link: "https://pomodoro-timer-three-lyart.vercel.app/",
-    thumbnail: "images/pomodoroV2.png",
+    thumbnail: "images/pomodoroV2.webp",
   },
   {
     title: "Pomodoro Timer",
     link: "https://pomodoro-six-ashen.vercel.app/",
-    thumbnail: "images/pomodoro.png",
+    thumbnail: "images/pomodoro.webp",
   },
 ];
