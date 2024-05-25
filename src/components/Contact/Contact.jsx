@@ -1,9 +1,7 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import AnimatedCursor from "react-animated-cursor";
 
 function Contact() {
-  const [email, setEmail] = useState("");
   const form = useRef();
 
   function handleEmail() {
