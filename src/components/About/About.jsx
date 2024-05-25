@@ -145,11 +145,17 @@ function About() {
           </div>
           <div className="flex">
             <span>20</span>
-            <span className="ml-4 text-white">&#125;&#125;</span>
+            <span className="ml-4 text-white">&#125;&#125;</span>{" "}
+            <a
+              href="src/assets/Resume/Natnael Abebe Resume.pdf"
+              download
+              className="ml-12 md:ml-80 border-2 border-[#c9fd74] bg-black text-[#c9fd74] rounded-lg p-2"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </div>
-      <p className="text-sky-500 mx-auto bg-black"></p>
     </div>
   );
 }

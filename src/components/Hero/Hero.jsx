@@ -111,14 +111,14 @@ function Hero() {
             // transition={{ duration: 2 }}
             className={`px-4  ${
               isVisible
-                ? "relative w-[180px] lg:w-[240px] rounded-xl"
+                ? "relative w-[180px] lg:w-[240px] rounded-xl "
                 : "fixed  right-4 bottom-4 lg:right-24 w-[60px] rounded-full"
-            }  cursor-pointer bg-[#c9fd74] ml-6 text-2xl h-[60px] text-black text-center leading-4 flex justify-center items-center my-8`}
+            }   bg-[#c9fd74] hover:scale-105 ml-6 text-2xl h-[60px] text-black text-center leading-4 flex justify-center items-center my-8`}
             onClick={handleClick}
             id="callToAction"
           >
             {isVisible ? (
-              <span>
+              <span className="">
                 <a href="#Contacts">Let's talk</a>
               </span>
             ) : (

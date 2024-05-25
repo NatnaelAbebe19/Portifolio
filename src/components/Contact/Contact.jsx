@@ -4,6 +4,7 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { ImLocation } from "react-icons/im";
 import emailjs from "@emailjs/browser";
+import AnimatedCursor from "react-animated-cursor";
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -35,6 +36,69 @@ function Contact() {
   }
 
   return (
+    <div
+      id="Contacts"
+      className="h-screen w-full flex flex-col justify-between"
+    >
+      <AnimatedCursor
+        innerSize={0}
+        outerSize={20}
+        color="201,253,116"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={5}
+        clickables={["a", "p", "button"]}
+      />
+      <div className="text-[#c9fd74] flex flex-col justify-center items-center h-full gap-y-20 md:gap-y-30">
+        <div className="text-center text-sm tracking-widest ">
+          I'M ALWAYS HAPPY TO TALK. <br />
+          AVAILABLE FOR FREELANCE WORK
+        </div>
+        <p onClick={handleEmail} className="capitalize text-6xl send">
+          <span className="font-Migra">send</span>{" "}
+          <span className="font-MigraItalic lowercase font-light">an</span>{" "}
+          <span className="font-Migra lowercase">email</span>
+        </p>
+      </div>
+
+      <div className="flex  flex-col md:flex-row md:justify-between ">
+        <div className="ml-4 uppercase text-[#c9fd74] flex gap-x-6 pb-12">
+          <a href="https://x.com/Natnael163260" target="_blank" className="">
+            twitter
+          </a>
+          <a
+            href="https://www.instagram.com/nathaniel_abebe/"
+            target="_blank"
+            className=""
+          >
+            Instagram
+          </a>
+          <a
+            href="https://www.linkedin.com/in/natnael-abebe-57a079295/"
+            target="_blank"
+            className=""
+          >
+            Linkedin
+          </a>
+        </div>
+        <div className="text-[#c9fd74] flex gap-x-4 uppercase  ml-4">
+          <a href="https://t.me/NatnaelAbebe" target="_blank" className="">
+            By Natnaels
+          </a>
+          <a onClick={handlePhone} className="">
+            Call Me
+          </a>
+          <span className="">&copy;2024</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Contact;
+
+/*
+
     <div id="Contacts" className="md:h-screen w-full">
       <h1 className="text-[#c9fd74] text-5xl py-10 text-center">
         Get in touch
@@ -117,7 +181,4 @@ function Contact() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default Contact;
+*/

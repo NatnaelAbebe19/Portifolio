@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Migra";
+  src: url("./assets/fonts/Migra-Extralight.ttf");
+}
+@font-face {
+  font-family: "Migra Italic";
+  src: url("./assets/fonts/MigraItalic-ExtralightItalic.ttf");
+}
 body {
   margin: 0;
   padding: 0;
@@ -209,4 +217,26 @@ body {
   100% {
     transform: rotateY(360deg);
   }
+}
+.send {
+  position: relative;
+}
+.send::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c9fd74;
+  transition: width 0.8s ease;
+}
+.send:hover {
+  /* background: linear-gradient(264deg, #df8908 50.41%, #b415ff 90.25%); */
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+}
+.send:hover::before {
+  width: 100%;
 }
