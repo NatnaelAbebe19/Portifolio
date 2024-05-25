@@ -55,10 +55,7 @@ body {
 .stroke span {
   -webkit-text-stroke: 0.7px #c9fd74;
   color: transparent;
-  /* padding: 5px; */
-  /* margin-left: -20px; */
   transition: all 0.6s cubic-bezier(0.61, 1, 0.88, 1);
-  /* transition: all 1s ease-in-out; */
 }
 
 .stroke span:hover {
@@ -232,10 +229,8 @@ body {
   transition: width 0.8s ease;
 }
 .send:hover {
-  /* background: linear-gradient(264deg, #df8908 50.41%, #b415ff 90.25%); */
   background-clip: text;
   -webkit-background-clip: text;
-  /* -webkit-text-fill-color: transparent; */
 }
 .send:hover::before {
   width: 100%;

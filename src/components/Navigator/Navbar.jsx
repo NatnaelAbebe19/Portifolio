@@ -6,7 +6,7 @@ function Navbar({ scrollToSection }) {
     <nav className="">
       <div className="font-bold">
         <a
-          href="#"
+          href="#Contacts"
           className="font-Megrim fixed text-[#c9fd74] font-bold md:py-7 py-4 px-4 md:px-0 md:text-3xl text-2xl z-[25515255]"
         >
           natnaels
