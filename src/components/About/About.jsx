@@ -147,7 +147,7 @@ function About() {
             <span>20</span>
             <span className="ml-4 text-white">&#125;&#125;</span>{" "}
             <a
-              href="src/assets/Resume/Natnael Abebe Resume.pdf"
+              href="/Resume/Natnael Abebe Resume.pdf"
               download
               className="ml-12 md:ml-80 border-2 border-[#c9fd74] bg-black text-[#c9fd74] rounded-lg p-2"
             >
