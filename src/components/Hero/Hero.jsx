@@ -111,7 +111,7 @@ function Hero() {
           <span className="text-[#c9fd74] font-Wallpoet">
             &lt;Natnael /&gt;
           </span>
-          &nbsp;Creative Front-end Developer, This portfolio showcases my
+          &nbsp;Creative Full-Stack Developer, This portfolio showcases my
           journey as a creative force. Let's collaborate and bring your vision
           to life.
         </div>

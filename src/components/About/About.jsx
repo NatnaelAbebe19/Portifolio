@@ -93,7 +93,7 @@ function About() {
             <span className="text-[14px] ml-4">......</span>
             <span className="text-white">&#123;</span>
             <span className="text-[#24E03B]">
-              &nbsp;I am currently 4<sup>th</sup> year software engineering
+              &nbsp;I am currently 5<sup>th</sup> year software engineering
               student at Wollo University : Kombolcha Institute of
               technology(KIOT)
             </span>
@@ -128,7 +128,7 @@ function About() {
             <span className="text-[14px] ml-4">......</span>
             <span className="text-white">&#123;</span>
             <span className="text-[#24E03B]">
-              &nbsp;'HTML', 'CSS', 'JavaScript', 'Tailwind', 'ReactJS', 'Vite',
+              &nbsp;'HTML', 'CSS', 'JavaScript', 'Tailwind', 'ReactJS','PHP', 'Laravel', 'Node/Express', 'Vite',
               'npm/yarn', 'Git/Github', 'Abobe XD', 'Figma'
             </span>
           </div>

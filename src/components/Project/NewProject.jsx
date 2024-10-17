@@ -11,9 +11,9 @@ export const products = [
     thumbnail: "images/audiophile.webp",
   },
   {
-    title: "Meme Generator",
-    link: "https://meme-generator-7mjad02p5-natnaelabebe19s-projects.vercel.app/",
-    thumbnail: "images/MemeGenerator.webp",
+    title: "Gebeta",
+    link: "https://Gebeta.com/",
+    thumbnail: "images/Gebeta.jpg",
   },
 
   {
