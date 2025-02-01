@@ -23,9 +23,9 @@ export const products = [
   },
 
   {
-    title: "Techino",
-    link: "https://tech-ino.vercel.app/",
-    thumbnail: "images/techino.webp",
+    title: "CMS",
+    link: "https://github.com/NatnaelAbebe19/Condominium-Management-System",
+    thumbnail: "images/CMS.png",
   },
   {
     title: "Tenzis",
