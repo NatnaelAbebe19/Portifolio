@@ -128,7 +128,7 @@ function About() {
             <span className="text-[14px] ml-4">......</span>
             <span className="text-white">&#123;</span>
             <span className="text-[#24E03B]">
-              &nbsp;'HTML', 'CSS', 'JavaScript', 'Tailwind', 'ReactJS','PHP', 'Laravel', 'Node/Express', 'Vite',
+              &nbsp;'HTML', 'CSS', 'JavaScript', 'Tailwind', 'ReactJS','PHP', 'Laravel', 'C#', '.NET', 'Node/Express', 'Vite',
               'npm/yarn', 'Git/Github', 'Abobe XD', 'Figma'
             </span>
           </div>
@@ -147,7 +147,7 @@ function About() {
             <span>20</span>
             <span className="ml-4 text-white">&#125;&#125;</span>{" "}
             <a
-              href="/Resume/Natnael-Abebe-Tiku-Resume.pdf"
+              href="/Resume/Natnael-Abebe-Tiku-updated.pdf"
               download
               className="ml-12 md:ml-80 border-2 border-[#c9fd74] bg-black text-[#c9fd74] rounded-lg p-2"
             >

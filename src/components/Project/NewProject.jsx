@@ -1,8 +1,8 @@
 export const products = [
   {
-    title: "Ableton Clone",
-    link: "https://ableton-clone-roan.vercel.app/",
-    thumbnail: "images/ableton.webp",
+    title: "Tenzis",
+    link: "https://roha-tenzies.vercel.app/",
+    thumbnail: "images/tenzis.webp",
   },
 
   {
@@ -11,9 +11,9 @@ export const products = [
     thumbnail: "images/audiophile.webp",
   },
   {
-    title: "Gebeta",
-    link: "https://Gebeta.com/",
-    thumbnail: "images/Gebeta.jpg",
+     title: "Roha Quizs",
+    link: "https://roha-quizs.vercel.app/",
+    thumbnail: "images/quiz.webp",
   },
 
   {
@@ -28,24 +28,23 @@ export const products = [
     thumbnail: "images/CMS.png",
   },
   {
-    title: "Tenzis",
-    link: "https://roha-tenzies.vercel.app/",
-    thumbnail: "images/tenzis.webp",
+    title: "Telemedicine Web App ",
+    link: "https://github.com/RohaTech/Telemedicine-Web-App",
+    thumbnail: "images/Tenadam.png",
   },
-
   {
     title: "Roha Quizs",
     link: "https://roha-quizs.vercel.app/",
     thumbnail: "images/quiz.webp",
   },
   {
-    title: "pomodoro v2",
-    link: "https://pomodoro-timer-three-lyart.vercel.app/",
-    thumbnail: "images/pomodoroV2.webp",
-  },
-  {
     title: "Pomodoro Timer",
     link: "https://pomodoro-six-ashen.vercel.app/",
     thumbnail: "images/pomodoro.webp",
+  },
+  {
+    title: "Project Management App",
+    link: "https://github.com/RohaTech/Project-Managment-Software",
+    thumbnail: "images/Gizebet_Project_Management_System.png",
   },
 ];
