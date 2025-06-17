@@ -5,7 +5,7 @@ import image1 from "/images/coder.webp";
 import image2 from "/images/2.webp";
 import image3 from "/images/3.webp";
 import image4 from "/images/4.webp";
-import image5 from "/images/space.webp";
+import image5 from "/images/space.jpg";
 import image6 from "/images/6.webp";
 import { OrbitControls } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
