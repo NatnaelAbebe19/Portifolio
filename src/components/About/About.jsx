@@ -78,7 +78,7 @@ function About() {
           <div className="flex">
             <span>09</span>
             <span className="text-[14px] ml-4">..</span>
-            <span className="text-[#EEFF31] ">education</span>
+            <span className="text-[#EEFF31] ">Education</span>
             <span className="text-[#fff]">() &#123;</span>
           </div>
           <div className="flex">
@@ -93,9 +93,7 @@ function About() {
             <span className="text-[14px] ml-4">......</span>
             <span className="text-white">&#123;</span>
             <span className="text-[#24E03B]">
-              &nbsp;I am currently 5<sup>th</sup> year software engineering
-              student at Wollo University : Kombolcha Institute of
-              technology(KIOT)
+              &nbsp;I graduated from Wollo University in Software Engineering with honor.
             </span>
           </div>
           <div className="flex">
